@@ -26,7 +26,7 @@ public class WandListener implements Listener {
         Player p = e.getPlayer();
         Action a = e.getAction();
         
-        if (!p.getItemInHand().hasItemMeta()) {
+        if (p.getInventory().getItemInHand() == null || !p.getItemInHand().hasItemMeta()) {
             return;
         }
         
